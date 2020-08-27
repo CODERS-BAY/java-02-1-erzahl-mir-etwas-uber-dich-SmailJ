@@ -6,45 +6,45 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Scanner sc=new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-        String firstName;
-        String lastName;
+        String firstName, lastName, fullName;
         int age;
         boolean married;
         double size;
 
-        String pattern="dd.MM.yyyy";
+        String pattern = "dd.MM.yyyy";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 
-        String date=simpleDateFormat.format(new Date());
+        String date = simpleDateFormat.format(new Date());
 
         System.out.println("Wie ist dein Vorname ?");
-        firstName=sc.nextLine();
+        firstName = sc.nextLine();
         System.out.println("Wie ist dein Nachname ?");
-        lastName=sc.nextLine();
+        lastName = sc.nextLine();
         System.out.println("Wie alt bist du ?");
-        age=sc.nextInt();
+        age = sc.nextInt();
         System.out.println("Bist du verheiratet ? true für Ja, false für nein");
-        married=sc.nextBoolean();
+        married = sc.nextBoolean();
         System.out.println("Wie groß bist du in Metern ? Bsp. 1,80");
-        size=sc.nextDouble();
+        size = sc.nextDouble();
 
-        System.out.println("Vorname: "+firstName);
-        System.out.println("Nachname: "+lastName);
-        System.out.println("Alter: "+age+" Jahre");
-        if(married == true){
+        System.out.println("Vorname: " + firstName);
+        System.out.println("Nachname: " + lastName);
+        System.out.println("Alter: " + age + " Jahre");
+        if (married) {
             System.out.println("Du bist verheiratet");
-        } else{
+        } else {
             System.out.println("Du bist nicht verheiratet");
         }
-        System.out.println("Größe: "+size+" m");
+        System.out.println("Größe: " + size + " m");
 
         //Bonus
-        System.out.println("Vor- und Nachname: "+firstName+" "+lastName);
+        fullName = firstName+" "+lastName;
+        System.out.println("Vor- und Nachname: " + fullName);
         System.out.println("Wann bist du geboren ? Bsp. 01.01.2020");
         sc.nextLine();
-        date=sc.nextLine();
-        System.out.println("Du bist am "+date+" geboren");
+        date = sc.nextLine();
+        System.out.println("Du bist am " + date + " geboren");
     }
 }
